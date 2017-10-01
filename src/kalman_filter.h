@@ -50,6 +50,10 @@ class KalmanFilter {
    * @param z The measurement at k+1
    */
   void UpdateEKF(const Eigen::VectorXd &z);
+
+ private:
+  Eigen::MatrixXd calculateK(Eigen::MatrixXd H);
+  Eigen::VectorXd h();
 };
 
 #endif /* KALMAN_FILTER_H_ */
